@@ -1,0 +1,790 @@
+
+<section class="light-gray-bg pv-30 clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="row">
+                    <div ng-controller="reproductor-ctl">
+                        <div class="progress-radial progress">
+                            <div class="overlay">
+                                <img class="img-responsive img-circle" src="assets/images/reproductor/pro.gif">
+                                <div class="controls">
+                                    <img src="assets/images/reproductor/play.png" class="img-play hidden" ng-click="clickplay()">
+                                    <img src="assets/images/reproductor/stop.png" class="img-stop" ng-click="clickpause()">
+                                </div>
+                                <div class="clearfix">
+                                    <div class="title-programa">{{programa.nombre}}</div>
+                                    <div class="space">{{fecha_actual}}</div>
+                                    <img ng-src="assets/images/prograreproductor/{{programa.logo}}" class="img-icon" alt="">
+                                    <div id="element-fechahora"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="banner-section">
+                        (-_-) NOSTOP 
+                    </div>
+                </div>
+                <div class="row">
+                    <ul class="event-list">
+                        <li ng-repeat="items in gettopten" >
+                            <time datetime="2014-07-20">
+                                <span class="day">{{$index+1}}</span>
+                            </time>
+                            <img alt="My 24th Birthday!" ng-src="{{items.img}}" />
+                            <div class="info">
+                                <h2 class="title">{{items.nombre_cancion | uppercase}}</h2>
+                                <p class="desc">{{items.artista | lowercase}}</p>
+                            </div>
+                            <div class="social">
+                                <ul>
+                                    <li class="facebook" style="width:33%;">
+                                        <a data-toggle="modal" data-target="#m-player" ng-click="mplayer(items)">
+                                            <span class="fa fa-play"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- Large modal -->
+                    <button class="btn btn-default" data-toggle="modal" data-target="#m-player">Large modal</button>
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <section>
+                <div class=" clearfix">
+                    <div class="slideshow">
+                        <!-- slider revolution start -->
+                        <!-- ================ -->
+                        <div class="slider-banner-container">
+                            <div class="slider-banner-fullwidth">
+                                <ul class="slides">
+                                    <!-- slide 1 start -->
+                                    <!-- ================ -->
+                                    <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-saveperformance="on">
+                                        <!-- main image -->
+                                        <img src="assets/images/slider/x0.jpg" alt="slidebg1" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover">
+                                    </li>
+                                    <!-- slide 1 end -->
+
+                                    <!-- slide 2 start -->
+                                    <!-- ================ -->
+                                    <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-saveperformance="on">
+
+                                        <!-- main image -->
+                                        <img src="assets/images/slider/x1.jpg" alt="slidebg2" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover">
+
+                                    </li>
+                                    <!-- slide 2 end -->
+                                    <!-- slide 3 start -->
+                                    <!-- ================ -->
+                                    <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-saveperformance="on">
+
+                                        <!-- main image -->
+                                        <img src="assets/images/slider/x2.jpg" alt="slidebg2" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover">
+
+                                    </li>
+                                    <!-- slide 3 end -->
+                                    <!-- slide 4 start -->
+                                    <!-- ================ -->
+                                    <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-saveperformance="on">
+
+                                        <!-- main image -->
+                                        <img src="assets/images/slider/x3.jpg" alt="slidebg2" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover">
+
+                                    </li>
+                                    <!-- slide 4 end -->
+                                    <!-- slide 4 start -->
+                                    <!-- ================ -->
+                                    <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-saveperformance="on">
+
+                                        <!-- main image -->
+                                        <img src="assets/images/slider/x4.jpg" alt="slidebg2" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover">
+
+                                    </li>
+                                    <!-- slide 4 end -->
+                                    <!-- slide 4 start -->
+                                    <!-- ================ -->
+                                    <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-saveperformance="on">
+
+                                        <!-- main image -->
+                                        <img src="assets/images/slider/x5.jpg" alt="slidebg2" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover">
+
+                                    </li>
+                                    <!-- slide 4 end -->
+                                </ul>
+                                <div class="tp-bannertimer"></div>
+                            </div>
+                        </div>
+                        <!-- slider revolution end -->
+                    </div>
+                </div>
+                </section>
+                <section>
+                <div class=" clearfix">
+                    <div class="slideshow">
+                        <!-- slider revolution start -->
+                        <!-- ================ -->
+                        <div class="slider-banner-container">
+                            <div class="slider-banner-fullwidth">
+                                <ul class="slides">
+                                    <!-- slide 1 start -->
+                                    <!-- ================ -->
+                                    <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-saveperformance="on">
+                                        <!-- main image -->
+                                        <img src="assets/images/slider/x0.jpg" alt="slidebg1" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover">
+                                    </li>
+                                    <!-- slide 1 end -->
+
+                                    <!-- slide 2 start -->
+                                    <!-- ================ -->
+                                    <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-saveperformance="on">
+
+                                        <!-- main image -->
+                                        <img src="assets/images/slider/x1.jpg" alt="slidebg2" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover">
+
+                                    </li>
+                                    <!-- slide 2 end -->
+                                    <!-- slide 3 start -->
+                                    <!-- ================ -->
+                                    <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-saveperformance="on">
+
+                                        <!-- main image -->
+                                        <img src="assets/images/slider/x2.jpg" alt="slidebg2" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover">
+
+                                    </li>
+                                    <!-- slide 3 end -->
+                                    <!-- slide 4 start -->
+                                    <!-- ================ -->
+                                    <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-saveperformance="on">
+
+                                        <!-- main image -->
+                                        <img src="assets/images/slider/x3.jpg" alt="slidebg2" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover">
+
+                                    </li>
+                                    <!-- slide 4 end -->
+                                    <!-- slide 4 start -->
+                                    <!-- ================ -->
+                                    <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-saveperformance="on">
+
+                                        <!-- main image -->
+                                        <img src="assets/images/slider/x4.jpg" alt="slidebg2" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover">
+
+                                    </li>
+                                    <!-- slide 4 end -->
+                                    <!-- slide 4 start -->
+                                    <!-- ================ -->
+                                    <li data-transition="fade" data-slotamount="1" data-masterspeed="500" data-saveperformance="on">
+
+                                        <!-- main image -->
+                                        <img src="assets/images/slider/x5.jpg" alt="slidebg2" data-bgposition="center top" data-bgrepeat="no-repeat" data-bgfit="cover">
+
+                                    </li>
+                                    <!-- slide 4 end -->
+                                </ul>
+                                <div class="tp-bannertimer"></div>
+                            </div>
+                        </div>
+                        <!-- slider revolution end -->
+                    </div>
+                </div>
+                </section>
+                <div class="block clearfix">
+                    <div id="carousel-portfolio-sidebar" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-portfolio-sidebar" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-portfolio-sidebar" data-slide-to="1"></li>
+                            <li data-target="#carousel-portfolio-sidebar" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="image-box shadow bordered text-center mb-20">
+                                    <div class="overlay-container">
+                                        <img src="assets/images/publicidad/l1.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="image-box shadow bordered text-center mb-20">
+                                    <div class="overlay-container">
+                                        <img src="assets/images/publicidad/l2.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="image-box shadow bordered text-center mb-20">
+                                    <div class="overlay-container">
+                                        <img src="assets/images/publicidad/l3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block clearfix">
+                    <div class="owl-carousel carousel-autoplay pl-10 pr-10">
+                        <div class="listing-item pl-10 pr-10 mb-20">
+                            <div class="overlay-container bordered overlay-visible">
+                                <img src="assets/images/category-1.jpg" alt="">
+                                <a class="overlay-link" href="#"><i class="fa fa-plus"></i></a>
+                                <div class="overlay-bottom">
+                                    <div class="text">
+                                        <div class="separator light"></div>
+                                        <p class="small margin-clear"><em>Quia nostrum temporibus et, <br> velit debitis ab, eligendi totam.</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-justify">
+                                <p>Lorem ipsum dolor sit amet, consectetur o aspernatur.
+                                    <a class="btn btn-default" href="page-services.html">Read More</a></p>
+                            </div>
+                        </div>
+                        <div class="listing-item pl-10 pr-10 mb-20">
+                            <div class="overlay-container bordered overlay-visible">
+                                <img src="assets/images/category-2.jpg" alt="">
+                                <a class="overlay-link" href="#"><i class="fa fa-plus"></i></a>
+                                <div class="overlay-bottom">
+                                    <div class="text">
+                                        <div class="separator light"></div>
+                                        <p class="small margin-clear"><em>Quia nostrum temporibus et, <br> velit debitis ab, eligendi totam.</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-justify">
+                                <p>Lorem ipsum dolor sit amet, consectetur o aspernatur.
+                                    <a class="btn btn-default" href="page-services.html">Read More</a></p>
+                            </div>
+                        </div>
+                        <div class="listing-item pl-10 pr-10 mb-20">
+                            <div class="overlay-container bordered overlay-visible">
+                                <img src="assets/images/category-3.jpg" alt="">
+                                <a class="overlay-link" href="#"><i class="fa fa-plus"></i></a>
+                                <div class="overlay-bottom">
+                                    <div class="text">
+                                        <div class="separator light"></div>
+                                        <p class="small margin-clear"><em>Quia nostrum temporibus et, <br> velit debitis ab, eligendi totam.</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-justify">
+                                <p>Lorem ipsum dolor sit amet, consectetur o aspernatur.
+                                    <a class="btn btn-default" href="page-services.html">Read More</a></p>
+                            </div>
+                        </div>
+                        <div class="listing-item pl-10 pr-10 mb-20 mb-20">
+                            <div class="overlay-container bordered overlay-visible">
+                                <img src="assets/images/category-4.jpg" alt="">
+                                <a class="overlay-link" href="#"><i class="fa fa-plus"></i></a>
+                                <div class="overlay-bottom">
+                                    <div class="text">
+                                        <div class="separator light"></div>
+                                        <p class="small margin-clear"><em>Quia nostrum temporibus et, <br> velit debitis ab, eligendi totam.</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-justify">
+                                <p>Lorem ipsum dolor sit amet, consectetur o aspernatur.
+                                    <a class="btn btn-default" href="page-services.html">Read More</a></p>
+                            </div>
+                        </div>
+                        <div class="listing-item pl-10 pr-10 mb-20 mb-20">
+                            <div class="overlay-container bordered overlay-visible">
+                                <img src="assets/images/category-4.jpg" alt="">
+                                <a class="overlay-link" href="#"><i class="fa fa-plus"></i></a>
+                                <div class="overlay-bottom">
+                                    <div class="text">
+                                        <div class="separator light"></div>
+                                        <p class="small margin-clear"><em>Quia nostrum temporibus et, <br> velit debitis ab, eligendi totam.</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-justify">
+                                <p>Lorem ipsum dolor sit amet, consectetur o aspernatur.
+                                    <a class="btn btn-default" href="page-services.html">Read More</a></p>
+                            </div>
+                        </div>
+                        <div class="listing-item pl-10 pr-10 mb-20 mb-20">
+                            <div class="overlay-container bordered overlay-visible">
+                                <img src="assets/images/category-2.jpg" alt="">
+                                <a class="overlay-link" href="#"><i class="fa fa-plus"></i></a>
+                                <div class="overlay-bottom">
+                                    <div class="text">
+                                        <div class="separator light"></div>
+                                        <p class="small margin-clear"><em>Quia nostrum temporibus et, <br> velit debitis ab, eligendi totam.</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-justify">
+                                <p>Lorem ipsum dolor sit amet, consectetur o aspernatur.
+                                    <a class="btn btn-default" href="page-services.html">Read More</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="fb-page" data-href="https://www.facebook.com/oyefmEcuador" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <div class="fb-xfbml-parse-ignore">
+                        <a href="">
+                            <i class="fa fa-spinner fa-spin"></i>
+                        </a>
+                    </div>
+                </div>
+                <a class="twitter-timeline" href="https://twitter.com/oyefm931" data-widget-id="695267215843672070">
+                    <i class="fa fa-spinner fa-spin"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2 class="text-center">Core <strong>Features</strong></h2>
+                <div class="separator"></div>
+                <p class="large text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam voluptas facere vero ex tempora saepe perspiciatis ducimus sequi animi.</p>
+            </div>
+            <div class="col-md-4 ">
+                <div class="pv-30 ph-20 feature-box bordered shadow text-center object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="100">
+                    <span class="icon default-bg circle"><i class="fa fa-diamond"></i></span>
+                    <h3>Clean Code &amp; Design</h3>
+                    <div class="separator clearfix"></div>
+                    <p>Voluptatem ad provident non repudiandae beatae cupiditate amet reiciendis lorem ipsum dolor sit amet, consectetur.</p>
+                    <a href="page-services.html">Read More <i class="pl-5 fa fa-angle-double-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="pv-30 ph-20 feature-box bordered shadow text-center object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="150">
+                    <span class="icon default-bg circle"><i class="fa fa-connectdevelop"></i></span>
+                    <h3>Extremely Flexible</h3>
+                    <div class="separator clearfix"></div>
+                    <p>Iure sequi unde hic. Sapiente quaerat sequi inventore veritatis cumque lorem ipsum dolor sit amet, consectetur.</p>
+                    <a href="page-services.html">Read More <i class="pl-5 fa fa-angle-double-right"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="pv-30 ph-20 feature-box bordered shadow text-center object-non-visible" data-animation-effect="fadeInDownSmall" data-effect-delay="200">
+                    <span class="icon default-bg circle"><i class="fa icon-snow"></i></span>
+                    <h3>Latest Technologies</h3>
+                    <div class="separator clearfix"></div>
+                    <p>Inventore dolores aut laboriosam cum consequuntur delectus sequi lorem ipsum dolor sit amet, consectetur.</p>
+                    <a href="page-services.html">Read More <i class="pl-5 fa fa-angle-double-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+<!-- section start -->
+<!-- ================ -->
+<section class="section default-bg clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="call-to-action text-center">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h1 class="title">Don't Miss Out Our Offers</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quasi explicabo consequatur consectetur, a atque voluptate officiis eligendi nostrum.</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <br>
+                            <p><a href="#" class="btn btn-lg btn-gray-transparent btn-animated">Learn More<i class="fa fa-arrow-right pl-20"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section end -->
+   
+<!-- section -->
+<!-- ================ -->
+<section class="pv-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2 class="text-center">Why <strong>Choose</strong> Us</h2>
+                <div class="separator"></div>
+                <p class="large text-center">Ataque ducimus velit, earum quidem, iusto dolorem. Ex ipsam totam quas blanditiis, pariatur maxime ipsa iste, doloremque neque doloribus, error. Corrupti, tenetur.</p>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="owl-carousel content-slider-with-large-controls">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="assets/images/section-image-1.png" alt="">
+                </div>
+                <div class="col-md-6">
+                    <p class="space-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At provident modi nobis dolores ratione, maiores beatae vel iste illo incidunt officia sed id cupiditate quasi excepturi</p>
+                    <div class="media">
+                        <div class="media-left pr-20">
+                            <a href="#">
+                                <span class="icon circle small default-bg"><i class="icon-eye"></i> </span>
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Extremely Flexible</h4>
+                            Cras sit amet nibh libero, in gravida nulla. Sollicitudin.
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left pr-20">
+                            <a href="#">
+                                <span class="icon circle small default-bg"><i class="icon-trophy"></i> </span>
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Packed Full Of Features</h4>
+                            Cras sit amet nibh libero. Nulla vel metus scelerisque.
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left pr-20">
+                            <a href="#">
+                                <span class="icon circle small default-bg"><i class="icon-lifebuoy"></i> </span>
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">24/7 Support</h4>
+                            Cras sit amet nibh libero. Nulla vel metus scelerisque.
+                        </div>
+                    </div>
+                    <p><a href="page-services.html" class="btn btn-default-transparent btn-animated">Learn More <i class="fa fa-arrow-right pl-10"></i></a></p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-right">
+                    <p class="space-top">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At provident modi nobis dolores ratione, maiores beatae vel iste illo incidunt officia sed id cupiditate quasi excepturi</p>
+                    <div class="media">
+                        <div class="media-body">
+                            <h4 class="media-heading">Extremely Flexible</h4>
+                            Cras sit amet nibh libero, in gravida nulla. Sollicitudin.
+                        </div>
+                        <div class="media-right pl-20">
+                            <a href="#">
+                                <span class="icon circle small default-bg"><i class="icon-eye"></i> </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-body">
+                            <h4 class="media-heading">Packed Full Of Features</h4>
+                            Cras sit amet nibh libero. Nulla vel metus scelerisque.
+                        </div>
+                        <div class="media-right pl-20">
+                            <a href="#">
+                                <span class="icon circle small default-bg"><i class="icon-trophy"></i> </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-body">
+                            <h4 class="media-heading">24/7 Support</h4>
+                            Cras sit amet nibh libero. Nulla vel metus scelerisque.
+                        </div>
+                        <div class="media-right pl-20">
+                            <a href="#">
+                                <span class="icon circle small default-bg"><i class="icon-lifebuoy"></i> </span>
+                            </a>
+                        </div>
+                    </div>
+                    <p><a href="page-services.html" class="btn btn-default-transparent btn-animated">Learn More <i class="fa fa-arrow-right pl-10"></i></a></p>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/images/section-image-2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section end -->
+
+
+<!-- video de la semana -->
+<section class="dark-translucent-bg pv-30 background-img-1 page" style="background-position:50% 30%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2 class="text-center">Video de la<strong> Semana</strong></h2>
+                <div class="separator"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6 ">
+                        <div class="feature-box-2 object-non-visible animated object-visible fadeInDownSmall" data-animation-effect="fadeInDownSmall" data-effect-delay="100">
+                            <span class="icon default-bg small"><i class="fa fa-heart-o"></i></span>
+                            <div class="body">
+                                <h4 class="title">Genero </h4>
+                                <p>{{videosemanal.genero}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="feature-box-2 object-non-visible animated object-visible fadeInDownSmall" data-animation-effect="fadeInDownSmall" data-effect-delay="150">
+                            <span class="icon default-bg small"><i class="fa fa-connectdevelop"></i></span>
+                            <div class="body">
+                                <h4 class="title">Artistas  / Grupo</h4>
+                                <p>{{videosemanal.artista}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="feature-box-2 object-non-visible animated object-visible fadeInDownSmall" data-animation-effect="fadeInDownSmall" data-effect-delay="200">
+                            <span class="icon default-bg small"><i class="icon-snow"></i></span>
+                            <div class="body">
+                                <h4 class="title">Tema Musical</h4>
+                                <p>{{videosemanal.cancion}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 ">
+                        <div class="feature-box-2 object-non-visible animated object-visible fadeInDownSmall" data-animation-effect="fadeInDownSmall" data-effect-delay="250">
+                            <span class="icon default-bg small"><i class="icon-check"></i></span>
+                            <div class="body">
+                                <h4 class="title">Otros</h4>
+                                <p>{{videosemanal.otros}}.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <youtube-video video-id="theBestVideo"></youtube-video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- section -->
+<!-- ================ -->
+<section class="pv-30 light-gray-bg ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2 class="text-center">OYE<strong>FM</strong></h2>
+                <div class="separator"></div>
+                <p class="large text-center">Promueve el sentido de pertenencia con base en la honestidad, lealtad, participación activa, proyección y posibilidades de ascenso del empleado y cumple la función social propia de la radio en el afianzamiento de valores.</p>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="space-bottom">
+        <div class="owl-carousel carousel">
+            <div class="image-box shadow text-center">
+                <div class="overlay-container">
+                    <img src="assets/images/portfolio-1.jpg" alt="">
+                    <div class="overlay-top">
+                        <div class="text">
+                            <h3><a href="portfolio-item.html">Project Title</a></h3>
+                            <p class="small">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="overlay-bottom">
+                        <div class="links">
+                            <a href="portfolio-item.html" class="btn btn-gray-transparent btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-box shadow text-center">
+                <div class="overlay-container">
+                    <img src="assets/images/portfolio-2.jpg" alt="">
+                    <div class="overlay-top">
+                        <div class="text">
+                            <h3><a href="portfolio-item.html">Project Title</a></h3>
+                            <p class="small">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="overlay-bottom">
+                        <div class="links">
+                            <a href="portfolio-item.html" class="btn btn-gray-transparent btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-box shadow text-center">
+                <div class="overlay-container">
+                    <img src="assets/images/portfolio-3.jpg" alt="">
+                    <div class="overlay-top">
+                        <div class="text">
+                            <h3><a href="portfolio-item.html">Project Title</a></h3>
+                            <p class="small">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="overlay-bottom">
+                        <div class="links">
+                            <a href="portfolio-item.html" class="btn btn-gray-transparent btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-box shadow text-center">
+                <div class="overlay-container">
+                    <img src="assets/images/portfolio-4.jpg" alt="">
+                    <div class="overlay-top">
+                        <div class="text">
+                            <h3><a href="portfolio-item.html">Project Title</a></h3>
+                            <p class="small">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="overlay-bottom">
+                        <div class="links">
+                            <a href="portfolio-item.html" class="btn btn-gray-transparent btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-box shadow text-center">
+                <div class="overlay-container">
+                    <img src="assets/images/portfolio-5.jpg" alt="">
+                    <div class="overlay-top">
+                        <div class="text">
+                            <h3><a href="portfolio-item.html">Project Title</a></h3>
+                            <p class="small">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="overlay-bottom">
+                        <div class="links">
+                            <a href="portfolio-item.html" class="btn btn-gray-transparent btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="image-box shadow text-center">
+                <div class="overlay-container">
+                    <img src="assets/images/portfolio-6.jpg" alt="">
+                    <div class="overlay-top">
+                        <div class="text">
+                            <h3><a href="portfolio-item.html">Project Title</a></h3>
+                            <p class="small">Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <div class="overlay-bottom">
+                        <div class="links">
+                            <a href="portfolio-item.html" class="btn btn-gray-transparent btn-animated">View Details <i class="pl-10 fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="owl-carousel content-slider">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="testimonial text-center">
+                            <div class="testimonial-image">
+                                <img src="assets/images/testimonial-despertador.jpg" alt="ElDespertador" title="ElDespertador" class="img-circle">
+                            </div>
+                            <h3>El Despertador</h3>
+                            <div class="separator"></div>
+                            <div class="testimonial-body">
+                                <p>Este espacio es un avance informativo, Con información de Noticias de interés, Internacionales, Nacionales, Regionales y locales, considerado de igual manera un espacio de Entrevistas a los actores de los hechos y aconteceres noticiosos del momento con la finalidad de llegar a brindar una información verídica a nuestros radio escuchas.</p>
+                                <div class="testimonial-info-1">- Juan Carlos Almeida</div>
+                                <div class="testimonial-info-2">- Marilyn Veronica Andrade</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="testimonial text-center">
+                            <div class="testimonial-image">
+                                <img src="assets/images/testimonial-sarten.jpg" alt="LaSartenPorElMango" title="LaSartenPorElMango" class="img-circle">
+                            </div>
+                            <h3>La Sartén Por el Mango</h3>
+                            <div class="separator"></div>
+                            <div class="testimonial-body">
+                                <p>Un programa que se caracteriza por ser manejado por un grupo de mujeres de tipo revista familiar donde la creatividad, el buen sentido del humor, la cocina, el deporte, temas de familia, novedades del espectáculo, belleza, salud, buena música compuesto así también con la presencia de especialistas en distintos ámbitos de interés social y familiar con propuestas actuales y de interés son parte de la diversión y el entretenimiento para el público oyente.</p>
+                                <div class="testimonial-info-1">- Laura Giraldo</div>
+                                <div class="testimonial-info-2">- Alexandra Torres</div>
+                                <div class="testimonial-info-2">- Beto Ruilova Idrovo</div>
+                                <div class="testimonial-info-2">- Andrés Salazar</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="testimonial text-center">
+                            <div class="testimonial-image">
+                                <img src="assets/images/testimonial-inbox.jpg" alt="InBox" title="InBox" class="img-circle">
+                            </div>
+                            <h3>Inbox</h3>
+                            <div class="separator"></div>
+                            <div class="testimonial-body">
+                                    <p>Un espacio juvenil con propuestas actuales, entretenido, dinámico y con una buena selección musical y dosis de buen humor además de variación y complacencia para los oyentes, brinda espacios de interés compuesto por varias segmentaciones de jocosidad y saludos para quienes están siempre conectados, Posee interacción de entrevistas a la semana para brindar espacios a los talentos tanto locales como nacionales dentro del ámbito juvenil principalmente.</p>
+                                <div class="testimonial-info-1">- Pollo Jacome</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="testimonial text-center">
+                            <div class="testimonial-image">
+                                <img src="assets/images/testimonial-hp.jpg" alt="LOS HP" title="LOS HP" class="img-circle">
+                            </div>
+                            <h3>Los HP</h3>
+                            <div class="separator"></div>
+                            <div class="testimonial-body">
+                                    <p>Una programación con dirección cultural e interactivo donde el público elige todas las canciones que sonarán durante la programación. Matizado con biografías, segmentos especiales, entrevistas, chacota, estreno del mundo rock y la más interesante información de variedades.</p>
+                                <div class="testimonial-info-1">- Lino Peñafiel</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="clients-container">
+                <div class="clients">
+                    <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="100">
+                        <a href="#"><img src="images/client-1.png" alt=""></a>
+                    </div>
+                    <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="200">
+                        <a href="#"><img src="images/client-2.png" alt=""></a>
+                    </div>
+                    <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="300">
+                        <a href="#"><img src="images/client-3.png" alt=""></a>
+                    </div>
+                    <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="400">
+                        <a href="#"><img src="images/client-4.png" alt=""></a>
+                    </div>
+                    <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="500">
+                        <a href="#"><img src="images/client-5.png" alt=""></a>
+                    </div>
+                    <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="600">
+                        <a href="#"><img src="images/client-6.png" alt=""></a>
+                    </div>
+                    <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="700">
+                        <a href="#"><img src="images/client-7.png" alt=""></a>
+                    </div>
+                    <div class="client-image object-non-visible" data-animation-effect="fadeIn" data-effect-delay="800">
+                        <a href="#"><img src="images/client-8.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
